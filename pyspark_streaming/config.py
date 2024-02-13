@@ -1,6 +1,6 @@
 import pyspark.sql.types as T
 
-INPUT_DATA_PATH = '/../data/rides.csv'
+INPUT_DATA_PATH = './data/rides.csv'
 BOOTSTRAP_SERVERS = 'localhost:9092'
 
 TOPIC_WINDOWED_VENDOR_ID_COUNT = 'vendor_counts_windowed'
