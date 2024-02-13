@@ -23,7 +23,7 @@ docker volume create --name=hadoop-distributed-file-system
 ## 3. Run Services on Docker
 
 ```bash
-# Stop Docker-Compose (Run in root directory)
+# Stop Docker-Compose (Run in the root directory)
 docker-compose -f ./docker/spark/docker-compose.yml up -d 
 ```
 We don't need to run docker all the commands to run the project are in start.sh we just need to run it.
@@ -44,5 +44,3 @@ docker rm -f $(docker ps -a -q)
 # Delete all volumes
 docker volume rm $(docker volume ls -q)
 ```
-
-Please ensure to replace `[Include instructions for running Spark and Kafka services on Docker]` with the actual commands or instructions needed to run Spark and Kafka services on Docker, if not provided already. Additionally, make sure to provide any necessary configuration details or setup steps for running these services successfully.
