@@ -16,18 +16,18 @@ chmod +x ./docker/spark/build.sh
 docker-compose -f ./docker/spark/docker-compose.yml up -d
 
 
-# Function to run command in a new VSCode terminal
-run_command_in_new_terminal() {
-    code --goto "$1" &
-    sleep 5  # Wait for VSCode window to open
-    code --remote-command "$2"
-}
+# # Function to run command in a new VSCode terminal
+# run_command_in_new_terminal() {
+#     code --goto "$1" &
+#     sleep 5  # Wait for VSCode window to open
+#     code --remote-command "$2"
+# }
 
-# Run producer in a new VSCode terminal
-run_command_in_new_terminal "producer.py" "python3 ./pyspark_streaming/producer.py"
+# # Run producer in a new VSCode terminal
+# run_command_in_new_terminal "producer.py" "python3 ./pyspark_streaming/producer.py"
 
-# Run consumer with default settings in a new VSCode terminal
-run_command_in_new_terminal "consumer.py" "python3 ./pyspark_streaming/consumer.py"
+# # Run consumer with default settings in a new VSCode terminal
+# run_command_in_new_terminal "consumer.py" "python3 ./pyspark_streaming/consumer.py"
 
-# Run streaming.py in a new VSCode terminal
-run_command_in_new_terminal "spark-submit.sh" "./pyspark_streaming/spark-submit.sh ./pyspark_streaming/streaming.py"
+# # Run streaming.py in a new VSCode terminal
+# run_command_in_new_terminal "spark-submit.sh" "./pyspark_streaming/spark-submit.sh ./pyspark_streaming/streaming.py"
